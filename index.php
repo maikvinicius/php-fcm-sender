@@ -3,7 +3,7 @@
 	
 	$msg[
 		'title' => '', // title of push 
-		'body' => '',  // Body of push
+		'subtitle' => '',  // Subtitle of push
 		'user' => '',  // Key of especific user
 	];
 

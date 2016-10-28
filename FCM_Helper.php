@@ -15,9 +15,9 @@ class FCM {
 
     $curl = curl_init();
 
-    $campos = "{\"notification\":{
+    $fields = "{\"notification\":{
       \"title\": \"". $msg['title'] ."\",
-      \"body\":\"" . $msg['body'] ."\",
+      \"body\":\"" . $msg['subtitle'] ."\",
       \"sound\":\"default\",
       \"icon\":\"fcm_push_icon\" },
       \"data\":{},
@@ -40,7 +40,7 @@ class FCM {
         CURLOPT_TIMEOUT => 30,
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => "POST",
-        CURLOPT_POSTFIELDS => $campos,
+        CURLOPT_POSTFIELDS => $fields,
         CURLOPT_HTTPHEADER => $headers
       )
     );
